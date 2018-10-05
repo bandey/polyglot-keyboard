@@ -2,6 +2,9 @@ import React from 'react';
 
 import PolyglotKeyboard from '../PolyglotKeyboard/PolyglotKeyboard.js'; 
 
+import ListGroup from 'react-bootstrap/lib/ListGroup';
+import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,19 +26,24 @@ class App extends React.Component {
   render() {
     let itemsBlock = this.state.items.map((item, index) => {
       return (
-        <div key={'item' + index}>
-          <button onClick={() => {this.toggleKeyboardVisibility(index)}}>
+        <ListGroupItem key={'item' + index}>
+          <button 
+            className="btn btn-info"
+            onClick={() => {this.toggleKeyboardVisibility(index)}}
+          >
             Modify
           </button>
           &nbsp;
           {item}
-        </div>
+        </ListGroupItem>
       );
     });
 
     return (
       <React.Fragment>
-        {itemsBlock}
+        <ListGroup>
+          {itemsBlock}
+        </ListGroup>
         <PolyglotKeyboard
           visible={this.state.isKeyboardVisible} 
           value={this.state.keyboardValue}
