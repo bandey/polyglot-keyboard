@@ -6,8 +6,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      appValue: 'initial',
+      items: [
+        'text1', 
+        'text2', 
+        'text3',
+      ],
       isKeyboardVisible: false,
+      keyboardItemIndex: 0,
       keyboardValue: '',
     };
     this.toggleKeyboardVisibility = this.toggleKeyboardVisibility.bind(this);
@@ -16,10 +21,21 @@ class App extends React.Component {
   }  
 
   render() {
+    let itemsBlock = this.state.items.map((item, index) => {
+      return (
+        <div key={'item' + index}>
+          <button onClick={() => {this.toggleKeyboardVisibility(index)}}>
+            Modify
+          </button>
+          &nbsp;
+          {item}
+        </div>
+      );
+    });
+
     return (
       <React.Fragment>
-        <button onClick={this.toggleKeyboardVisibility}>Toggle</button>
-        <span>{this.state.appValue}</span>
+        {itemsBlock}
         <PolyglotKeyboard
           visible={this.state.isKeyboardVisible} 
           value={this.state.keyboardValue}
@@ -30,11 +46,12 @@ class App extends React.Component {
     );
   }
 
-  toggleKeyboardVisibility() {
+  toggleKeyboardVisibility(index) {
     this.setState((prevState) => {
       return { 
         isKeyboardVisible: !prevState.isKeyboardVisible,
-        keyboardValue: prevState.appValue,
+        keyboardItemIndex: index,
+        keyboardValue: prevState.items[index],
       };
     });
   }
@@ -46,7 +63,11 @@ class App extends React.Component {
   onKeyboardAction(action, value) {
     if (action === 'accept') {
       console.log("Input accepted:", value);
-      this.setState({isKeyboardVisible: false, appValue: value});
+      this.setState((prevState) => {
+        let items = [...prevState.items];
+        items[prevState.keyboardItemIndex] = value;
+        return {isKeyboardVisible: false, items: items};
+      });
     } else {
       console.log("Input cancelled");
       this.setState({isKeyboardVisible: false});
