@@ -5,8 +5,6 @@ import Keyboard from 'react-virtual-keyboard';
 class PolyglotKeyboard extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {input: 'initial'};
-    this.onInputChanged = this.onInputChanged.bind(this);
     this.onInputAccepted = this.onInputAccepted.bind(this);
     this.onInputCancelled = this.onInputCancelled.bind(this);
   }  
@@ -14,8 +12,8 @@ class PolyglotKeyboard extends React.PureComponent {
   render() {
     return (
       <Keyboard 
-        value={this.state.input}
         name='keyboard'
+        value={this.props.value}
         options={{
           appendLocally: true,
           alwaysOpen: true,
@@ -28,22 +26,18 @@ class PolyglotKeyboard extends React.PureComponent {
           updateOnChange: true,
           canceled: this.onInputCancelled,
         }}
-        onChange={this.onInputChanged}
+        onChange={this.props.onChange}
         onAccepted={this.onInputAccepted}
       />
     );
   }
 
-  onInputChanged(value) {
-    this.setState({input: value});
-  }
-
   onInputAccepted(value) {
-    console.log("Input accepted:", value);
+    this.props.onAction('accept', value);
   }
 
   onInputCancelled() {
-    console.log("Input cancelled");
+    this.props.onAction('cancel');
   }
 }
 
