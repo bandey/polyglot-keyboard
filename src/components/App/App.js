@@ -46,9 +46,10 @@ class App extends React.Component {
   onKeyboardAction(action, value) {
     if (action === 'accept') {
       console.log("Input accepted:", value);
-      this.setState({appValue: value});
+      this.setState({isKeyboardVisible: false, appValue: value});
     } else {
       console.log("Input cancelled");
+      this.setState({isKeyboardVisible: false});
     }
   }
 };
