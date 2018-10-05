@@ -1,0 +1,11 @@
+{
+  "name": "polyglot-keyboard",
+  "version": "0.1.0",
+  "description": "Multilingual virtual keyboard",
+  "private": true,
+  "author": "Dmitrii Kondratev <origbandey@gmail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
