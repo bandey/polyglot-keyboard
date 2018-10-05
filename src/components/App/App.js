@@ -6,8 +6,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      appValue: 'initial',
       isKeyboardVisible: false,
-      keyboardValue: 'initial',
+      keyboardValue: '',
     };
     this.toggleKeyboardVisibility = this.toggleKeyboardVisibility.bind(this);
     this.onKeyboardChange = this.onKeyboardChange.bind(this);
@@ -18,6 +19,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <button onClick={this.toggleKeyboardVisibility}>Toggle</button>
+        <span>{this.state.appValue}</span>
         <PolyglotKeyboard
           visible={this.state.isKeyboardVisible} 
           value={this.state.keyboardValue}
@@ -32,6 +34,7 @@ class App extends React.Component {
     this.setState((prevState) => {
       return { 
         isKeyboardVisible: !prevState.isKeyboardVisible,
+        keyboardValue: prevState.appValue,
       };
     });
   }
@@ -43,6 +46,7 @@ class App extends React.Component {
   onKeyboardAction(action, value) {
     if (action === 'accept') {
       console.log("Input accepted:", value);
+      this.setState({appValue: value});
     } else {
       console.log("Input cancelled");
     }
