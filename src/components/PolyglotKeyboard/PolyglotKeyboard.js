@@ -10,6 +10,10 @@ class PolyglotKeyboard extends React.PureComponent {
   }  
 
   render() {
+    if (!this.props.visible) {
+      return null;
+    }
+
     return (
       <Keyboard 
         name='keyboard'
