@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Modal from 'react-bootstrap/lib/Modal';
 import Keyboard from 'react-virtual-keyboard'; 
 
 class PolyglotKeyboard extends React.PureComponent {
@@ -15,33 +16,37 @@ class PolyglotKeyboard extends React.PureComponent {
     }
 
     return (
-      <Keyboard 
-        name='keyboard'
-        value={this.props.value}
-        options={{
-          appendLocally: true,
-          alwaysOpen: true,
-          type: "input",
-          usePreview: false,
-          useWheel: false,
-          layout: "qwerty",
-          color: "light",
-          initialFocus: true,
-          css: {
-            container: 'text-center',
-            input: 'form-control',
-            buttonDefault: 'btn btn-default',
-            buttonAction: 'btn-info',
-            // buttonHover: 'btn-secondary',
-            buttonActive: 'btn-primary',
-            buttonDisabled: 'disabled',
-          },
-          updateOnChange: true,
-          canceled: this.onInputCancelled,
-        }}
-        onChange={this.props.onChange}
-        onAccepted={this.onInputAccepted}
-      />
+      <Modal show={true} onHide={this.onInputCancelled}>
+        <Modal.Body>
+          <Keyboard 
+            name='keyboard'
+            value={this.props.value}
+            options={{
+              appendLocally: true,
+              alwaysOpen: true,
+              type: "input",
+              usePreview: false,
+              useWheel: false,
+              layout: "qwerty",
+              color: "light",
+              initialFocus: true,
+              css: {
+                container: 'text-center',
+                input: 'form-control',
+                buttonDefault: 'btn btn-default',
+                buttonAction: 'btn-info',
+                // buttonHover: 'btn-secondary',
+                buttonActive: 'btn-primary',
+                buttonDisabled: 'disabled',
+              },
+              updateOnChange: true,
+              canceled: this.onInputCancelled,
+            }}
+            onChange={this.props.onChange}
+            onAccepted={this.onInputAccepted}
+          />
+        </Modal.Body>
+      </Modal>
     );
   }
 
