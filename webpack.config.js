@@ -12,4 +12,8 @@ module.exports = {
       { from: './src/index.html', to: './' },
     ], { copyUnmodified: false }),
   ],
+  devServer: {
+    contentBase: './dist',
+    hot: false
+  }
 };
