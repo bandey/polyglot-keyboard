@@ -27,6 +27,15 @@ class PolyglotKeyboard extends React.PureComponent {
           layout: "qwerty",
           color: "light",
           initialFocus: true,
+          css: {
+            container: 'text-center',
+            input: 'form-control',
+            buttonDefault: 'btn btn-default',
+            buttonAction: 'btn-info',
+            // buttonHover: 'btn-secondary',
+            buttonActive: 'btn-primary',
+            buttonDisabled: 'disabled',
+          },
           updateOnChange: true,
           canceled: this.onInputCancelled,
         }}
