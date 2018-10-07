@@ -40,6 +40,7 @@ module.exports = {
     extensions: ['.js'],
   },
   plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
       { from: './src/index.html', to: './' },
