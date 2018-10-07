@@ -1,0 +1,10 @@
+:global .ui-keyboard-button {
+  margin: .1em;
+}
+
+:global .ui-keyboard-spacer {
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  cursor: default;
+}

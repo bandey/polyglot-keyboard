@@ -3,6 +3,8 @@ import React from 'react';
 import Modal from 'react-bootstrap/lib/Modal';
 import Keyboard from 'react-virtual-keyboard'; 
 
+import './PolyglotKeyboard.css';
+
 class PolyglotKeyboard extends React.PureComponent {
   constructor(props) {
     super(props);
