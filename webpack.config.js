@@ -47,6 +47,7 @@ module.exports = {
       { from: './node_modules/bootstrap/dist/css/bootstrap.min.css', to: './styles/' },
     ], { copyUnmodified: false }),
   ],
+  devtool: 'cheap-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     hot: true
