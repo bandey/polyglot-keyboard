@@ -16,7 +16,24 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
-      }
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false,
+              modules: true,
+              importLoaders: 1,
+              camelCase: true,
+              localIdentName: '[path][local]',
+            }
+          },
+        ]
+      },
     ]
   },
   resolve: {
