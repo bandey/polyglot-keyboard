@@ -1,0 +1,9 @@
+@font-face {
+  font-family: PolyglotUnited;
+  src: url("../fonts/PolyglotUnited.woff") format("woff");
+}
+
+:global .fontMedieval {
+  font-family: PolyglotUnited, "Times New Roman", Times, serif;
+  font-size: larger;
+}

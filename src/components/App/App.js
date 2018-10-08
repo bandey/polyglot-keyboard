@@ -34,7 +34,7 @@ class App extends React.Component {
             Modify
           </button>
           &nbsp;
-          {item}
+          <span className="fontMedieval">{item}</span>
         </ListGroupItem>
       );
     });
