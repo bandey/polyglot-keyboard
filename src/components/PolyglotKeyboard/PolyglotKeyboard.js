@@ -36,11 +36,19 @@ class PolyglotKeyboard extends React.PureComponent {
                 ],
                 'meta-lat' : [ // Latin lower case
                   '{accept} {cancel} {meta-lat}',
-                  '{shift} {bksp} {space} a b c d e f g h i j k l m n o p q r s t u w v x y z',
+                  '{alt} {shift} {bksp} {space} a b c d e f g h i j k l m n o p q r s t u w v x y z',
                 ],
                 'meta-lat-shift' : [ // Latin upper case
                   '{accept} {cancel} {meta-lat}',
-                  '{shift} {bksp} {space} A B C D E F G H I J K L M N O P Q R S T U W V X Y Z',
+                  '{alt} {shift} {bksp} {space} A B C D E F G H I J K L M N O P Q R S T U W V X Y Z',
+                ],
+                'meta-lat-alt' : [ // Latin punctuation, digits and symbols part 1
+                  '{accept} {cancel} {meta-lat}',
+                  '{alt} {shift} {bksp} {space} \u2014 ` 1 2 3 4 5 6 7 8 9 0 - = / \\ [ ] , . ; \' \u2018 \u2019',
+                ],
+                'meta-lat-alt-shift' : [ // Latin punctuation, digits and symbols part 2
+                  '{accept} {cancel} {meta-lat}',
+                  '{alt} {shift} {bksp} {space} \u2116 ~ ! @ # $ % ^ & * ( ) _ + ? | { } < > : " \u201c \u201d \u00ab \u00bb',
                 ],
               },
               display: {
