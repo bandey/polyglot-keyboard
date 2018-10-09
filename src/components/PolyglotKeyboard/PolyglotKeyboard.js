@@ -29,7 +29,23 @@ class PolyglotKeyboard extends React.PureComponent {
               type: "input",
               usePreview: false,
               useWheel: false,
-              layout: "qwerty",
+              layout: 'custom',
+              customLayout: {
+                'normal': [
+                  '{accept} {cancel} {meta-lat}',
+                ],
+                'meta-lat' : [ // Latin lower case
+                  '{accept} {cancel} {meta-lat}',
+                  '{shift} {bksp} {space} a b c d e f g h i j k l m n o p q r s t u w v x y z',
+                ],
+                'meta-lat-shift' : [ // Latin upper case
+                  '{accept} {cancel} {meta-lat}',
+                  '{shift} {bksp} {space} A B C D E F G H I J K L M N O P Q R S T U W V X Y Z',
+                ],
+              },
+              display: {
+                "meta-lat": "Lat",
+              },
               color: "light",
               initialFocus: true,
               css: {
