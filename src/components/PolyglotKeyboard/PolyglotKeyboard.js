@@ -19,11 +19,13 @@ class PolyglotKeyboard extends React.PureComponent {
       return null;
     }
 
+    const name = this.props.name || 'keyboard';
+
     return (
       <Modal show={true} onHide={this.onInputCancelled}>
         <Modal.Body>
           <Keyboard 
-            name='keyboard'
+            name={name}
             value={this.props.value}
             options={{
               appendLocally: true,

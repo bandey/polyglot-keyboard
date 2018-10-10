@@ -45,6 +45,7 @@ class App extends React.Component {
           {itemsBlock}
         </ListGroup>
         <PolyglotKeyboard
+          name="keyboard"
           visible={this.state.isKeyboardVisible} 
           value={this.state.keyboardValue}
           onChange={this.onKeyboardChange}
