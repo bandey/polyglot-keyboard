@@ -47,6 +47,7 @@ class PolyglotKeyboard extends React.PureComponent {
                 buttonActive: 'btn-primary',
                 buttonDisabled: 'disabled',
               },
+              beforeInsert: keyboardLayout.beforeInsert,
               updateOnChange: true,
               canceled: this.onInputCancelled,
             }}
