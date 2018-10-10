@@ -26,11 +26,15 @@ export default {
     ],
     'meta-gre-shift' : [ // Greek upper case
       '{accept} {cancel} {meta-lat} {meta-gre}',
-      '{shift} {bksp} {space} \u0391 \u0392 \u0393 \u0394 \u0395 \u0396 \u0397 \u0398 \u0399 \u039a \u039b \u039c \u039d \u039e \u039f \u03a0 \u03a1 \u03a3 \u03a4 \u03a5 \u03a6 \u03a7 \u03a8 \u03a9',
+      '{alt} {shift} {bksp} {space} \u0391 \u0392 \u0393 \u0394 \u0395 \u0396 \u0397 \u0398 \u0399 \u039a \u039b \u039c \u039d \u039e \u039f \u03a0 \u03a1 \u03a3 \u03a4 \u03a5 \u03a6 \u03a7 \u03a8 \u03a9',
     ],
-    'meta-gre-alt' : [ // Greek diacritics
+    'meta-gre-alt' : [ // Greek diacritics and symbols
       '{accept} {cancel} {meta-lat} {meta-gre}',
-      '{alt} {shift} {bksp} {space} \u25cc\u0345',
+      '{alt} {shift} {bksp} {space} \u03de \u03e0 \u271d \u02bc \u0375 \u0384 \u25cc\u0345 \u25cc\u0313 \u25cc\u0314 \u25cc\u0308 \u25cc\u0342 \u25cc\u0300 \u25cc\u0301 \u25cc\u0304 \u0387',
+    ],
+    'meta-gre-alt-shift' : [ // Greek diacritics and symbols repeat
+      '{accept} {cancel} {meta-lat} {meta-gre}',
+      '{alt} {shift} {bksp} {space} \u03de \u03e0 \u271d \u02bc \u0375 \u0384 \u25cc\u0345 \u25cc\u0313 \u25cc\u0314 \u25cc\u0308 \u25cc\u0342 \u25cc\u0300 \u25cc\u0301 \u25cc\u0304 \u0387',
     ],
   },
   display: {
