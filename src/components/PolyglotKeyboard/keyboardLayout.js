@@ -43,6 +43,8 @@ export default {
   display: {
     "meta-lat": "Lat",
     "meta-gre": "Gre",
+    "shift": "\u21e7",
+    "bksp": "\u232b",
   },
   beforeInsert: function(e, keyboard, el, textToAdd) {
     return (textToAdd) && (textToAdd[0] === '\u25cc') && (textToAdd.length > 1) ? 
