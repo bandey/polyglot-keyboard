@@ -1,4 +1,4 @@
-const commonFirstLine = '{accept} {cancel} {meta-lat} {meta-gre}';
+const commonFirstLine = '{accept} {cancel} {meta-lat} {meta-ext} {meta-gre}';
 const commonSecondPart = '{alt} {shift} {bksp} {space}';
 
 export default {
@@ -23,6 +23,14 @@ export default {
       commonFirstLine,
       commonSecondPart + ' \u2116 ~ ! @ # $ % ^ & * ( ) _ + ? | { } < > : " \u201c \u201d \u00ab \u00bb',
     ],
+    'meta-ext' : [ // Extended latin lower case
+      commonFirstLine,
+      commonSecondPart + ' \u00e0 \u00e1 \u00e2 \u00e3 \u00e4 \u00e5 \u0105 \u0107 \u010d \u00e7 \u010f \u00e8 \u00e9 \u00ea \u011b \u00eb \u0119 \u0131 \u00ec \u00ed \u00ee \u0129 \u00ef \u0144 \u0148 \u00f1 \u00f2 \u00f3 \u00f4 \u00f5 \u00f6 \u0159',
+    ],
+    'meta-ext-shift' : [ // Extended latin upper case
+      commonFirstLine,
+      commonSecondPart + ' \u00c0 \u00c1 \u00c2 \u00c3 \u00c4 \u00c5 \u0104 \u0106 \u010c \u00c7 \u010e \u00c8 \u00c9 \u00ca \u011a \u00cb \u0118 \u00cc \u00cd \u00ce \u0128 \u00cf \u0143 \u0147 \u00d1 \u00d2 \u00d3 \u00d4 \u00d5 \u00d6 \u0158',
+    ],
     'meta-gre' : [ // Greek lower case
       commonFirstLine,
       commonSecondPart + ' \u03b1 \u03b2 \u03b3 \u03b4 \u03b5 \u03b6 \u03b7 \u03b8 \u03b9 \u03ba \u03bb \u03bc \u03bd \u03be \u03bf \u03c0 \u03c1 \u03c2 \u03c3 \u03c4 \u03c5 \u03c6 \u03c7 \u03c8 \u03c9',
@@ -42,6 +50,7 @@ export default {
   },
   display: {
     "meta-lat": "Lat",
+    "meta-ext": "Ext",
     "meta-gre": "Gre",
     "shift": "\u21e7",
     "bksp": "\u232b",
