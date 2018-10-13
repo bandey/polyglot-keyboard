@@ -31,6 +31,14 @@ export default {
       commonFirstLine,
       commonSecondPart + ' \u00c0 \u00c1 \u00c2 \u00c3 \u00c4 \u00c5 \u0104 \u0106 \u010c \u00c7 \u010e \u00c8 \u00c9 \u00ca \u011a \u00cb \u0118 \u00cc \u00cd \u00ce \u0128 \u00cf \u0143 \u0147 \u00d1 \u00d2 \u00d3 \u00d4 \u00d5 \u00d6 \u0158',
     ],
+    'meta-ext-alt' : [ // Extended latin lower case part 2
+      commonFirstLine,
+      commonSecondPart + ' \u015b \u0161 \u015f \u0165 \u021b \u00f9 \u00fa \u00fb \u0169 \u00fc \u016f \u00fd \u00ff \u017a \u017e \u017c \u00e6 \u0153 \u0111 \u00df \u0142',
+    ],
+    'meta-ext-alt-shift' : [ // Extended latin upper case part 2
+      commonFirstLine,
+      commonSecondPart + ' \u015a \u0160 \u015e \u0164 \u021a \u00d9 \u00da \u00db \u0168 \u00dc \u016e \u00dd \u0178 \u0179 \u017d \u017b \u00c6 \u0152 \u0110 \u0141',
+    ],
     'meta-gre' : [ // Greek lower case
       commonFirstLine,
       commonSecondPart + ' \u03b1 \u03b2 \u03b3 \u03b4 \u03b5 \u03b6 \u03b7 \u03b8 \u03b9 \u03ba \u03bb \u03bc \u03bd \u03be \u03bf \u03c0 \u03c1 \u03c2 \u03c3 \u03c4 \u03c5 \u03c6 \u03c7 \u03c8 \u03c9',
