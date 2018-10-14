@@ -1,4 +1,4 @@
-const commonFirstLine = '{accept} {cancel} {meta-lat} {meta-ext} {meta-gre}';
+const commonFirstLine = '{accept} {cancel} {meta-lat} {meta-ext} {meta-gre} {meta-cyr}';
 const commonSecondPart = '{alt} {shift} {bksp} {space}';
 
 export default {
@@ -55,11 +55,20 @@ export default {
       commonFirstLine,
       commonSecondPart + ' \u03de \u03e0 \u271d \u02bc \u0375 \u0384 \u25cc\u0345 \u25cc\u0313 \u25cc\u0314 \u25cc\u0308 \u25cc\u0342 \u25cc\u0300 \u25cc\u0301 \u25cc\u0304 \u0387',
     ],
+    'meta-cyr' : [ // Cyrillic lower case
+      commonFirstLine,
+      commonSecondPart + ' а б в г д е ж \u0455 \ua643 з и \ua647 \u0456 \u0457 \u045b \ue205 к л м н о п р с т у \u0479 \ua64b ф х \u0461',
+    ],
+    'meta-cyr-shift' : [ // Cyrillic upper case
+      commonFirstLine,
+      commonSecondPart + ' А Б В Г Д Е Ж \u0405 \ua642 З И \u0406 \u0407 \u040b \ue204 К Л М Н О П Р С Т У \u0478 \ua64a Ф Х \u0460',
+    ],
   },
   display: {
     "meta-lat": "Lat",
     "meta-ext": "Ext",
     "meta-gre": "Gre",
+    "meta-cyr": "Cyr",
     "shift": "\u21e7",
     "bksp": "\u232b",
   },
