@@ -63,6 +63,14 @@ export default {
       commonFirstLine,
       commonSecondPart + ' А Б В Г Д Е Ж \u0405 \ua642 З И \u0406 \u0407 \u040b \ue204 К Л М Н О П Р С Т У \u0478 \ua64a Ф Х \u0460',
     ],
+    'meta-cyr-alt' : [ // Cyrillic lower case part 2 and symbols
+      commonFirstLine,
+      commonSecondPart + ' \u047f ц ч \u0481 ш щ ъ ы ь \u0463 ю я \u0465 \u0467 \u0469 \u046b \u046d \u046f \u0471 \u0473 \u0475 \u0452 \u045f \u0459 \u045a \u02bc \u25cc\u0308 \u25cc\ue014 \u25cc\ue010 \u0387 \u00b7',
+    ],
+    'meta-cyr-alt-shift' : [ // Cyrillic upper case part 2 and symbols
+       commonFirstLine,
+       commonSecondPart + ' \u047e Ц Ч \u0480 Ш Щ Ъ Ы Ь \u0462 Ю Я \u0464 \u0466 \u0468 \u046a \u046c \u046e \u0470 \u0472 \u0474 \u0402 \u040f \u0409 \u040a \u02bc \u25cc\u0308 \u25cc\ue014 \u25cc\ue010 \u0387 \u00b7',
+    ],
   },
   display: {
     "meta-lat": "Lat",
