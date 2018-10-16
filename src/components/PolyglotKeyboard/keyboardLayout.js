@@ -1,4 +1,4 @@
-const commonFirstLine = '{accept} {cancel} {meta-lat} {meta-ext} {meta-gre} {meta-cyr}';
+const commonFirstLine = '{accept} {cancel} {meta-lat} {meta-ext} {meta-gre} {meta-cyr} {meta-gla}';
 const commonSecondPart = '{alt} {shift} {bksp} {space}';
 
 export default {
@@ -71,12 +71,21 @@ export default {
       commonFirstLine,
       commonSecondPart + ' \u047e Ц Ч \u0480 Ш Щ Ъ Ы Ь \u0462 Ю Я \u0464 \u0466 \u0468 \u046a \u046c \u046e \u0470 \u0472 \u0474 \u0402 \u040f \u0409 \u040a \u02bc \u25cc\u0308 \u25cc\ue014 \u25cc\ue010 \u0387 \u00b7',
     ],
+    'meta-gla' : [ // Glagolitic lower case
+      commonFirstLine,
+      commonSecondPart + ' \u2c30 \u2c31 \u2c32 \u2c33 \u2c34 \u2c35 \u2c36 \u2c37 \u2c38 \u2c39 \u2c3a \u2c3b \u2c3c \u2c3d \u2c3e \u2c3f \u2c40 \u2c41 \u2c42 \u2c43 \u2c44 \u2c45 \u2c46 \u2c47 \u2c48 \u2c49 \u2c4b \u2c4c',
+    ],
+    'meta-gla-alt' : [ // Glagolitic lower case part 2
+      commonFirstLine,
+      commonSecondPart + ' \u2c4d \u2c4e \u2c4f \u2c50 \u2c51 \u2c53 \u2c54 \u2c57 \u2c58 \u2c59 \u2c5a \u2c5b',
+    ],
   },
   display: {
     "meta-lat": "Lat",
     "meta-ext": "Ext",
     "meta-gre": "Gre",
     "meta-cyr": "Cyr",
+    "meta-gla": "Gla",
     "shift": "\u21e7",
     "bksp": "\u232b",
   },
