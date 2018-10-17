@@ -75,9 +75,17 @@ export default {
       commonFirstLine,
       commonSecondPart + ' \u2c30 \u2c31 \u2c32 \u2c33 \u2c34 \u2c35 \u2c36 \u2c37 \u2c38 \u2c39 \u2c3a \u2c3b \u2c3c \u2c3d \u2c3e \u2c3f \u2c40 \u2c41 \u2c42 \u2c43 \u2c44 \u2c45 \u2c46 \u2c47 \u2c48 \u2c49 \u2c4b \u2c4c',
     ],
+    'meta-gla-shift' : [ // Glagolitic upper case
+      commonFirstLine,
+      commonSecondPart + ' \u2c00 \u2c01 \u2c02 \u2c03 \u2c04 \u2c05 \u2c06 \u2c07 \u2c08 \u2c09 \u2c0a \u2c0b \u2c0c \u2c0d \u2c0e \u2c0f \u2c10 \u2c11 \u2c12 \u2c13 \u2c14 \u2c15 \u2c16 \u2c17 \u2c18 \u2c19 \u2c1b \u2c1c',
+    ],
     'meta-gla-alt' : [ // Glagolitic lower case part 2
       commonFirstLine,
       commonSecondPart + ' \u2c4d \u2c4e \u2c4f \u2c50 \u2c51 \u2c53 \u2c54 \u2c57 \u2c58 \u2c59 \u2c5a \u2c5b',
+    ],
+    'meta-gla-alt-shift' : [ // Glagolitic upper case part 2
+      commonFirstLine,
+      commonSecondPart + ' \u2c1d \u2c1e \u2c1f \u2c20 \u2c21 \u2c23 \u2c24 \u2c27 \u2c28 \u2c29 \u2c2a \u2c2b',
     ],
   },
   display: {
