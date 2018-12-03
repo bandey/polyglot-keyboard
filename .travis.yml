@@ -1,4 +1,10 @@
 language: node_js
 node_js:
   - "8"
-  - "lts/*"
+before_script:
+  - echo $HEROKU_KEY
+script:
+  - npm run build
+  - echo \"<?php header('Location: /dist/index.html'); ?>\" > ./index.php
+after_script:
+  - ls
