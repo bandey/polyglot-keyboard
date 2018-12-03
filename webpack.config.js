@@ -58,6 +58,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([
       { from: './src/index.html', to: './' },
+      { from: './src/index.php', to: './' },
       { from: './node_modules/bootstrap/dist/css/bootstrap.min.css', to: './styles/' },
     ], { copyUnmodified: false }),
   ],
