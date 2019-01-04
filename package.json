@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Multilingual virtual keyboard",
   "private": true,
-  "author": "Dmitrii Kondratev <origbandey@gmail.ru>",
+  "author": "Dmitrii Kondratev <origbandey@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Skip: no test specified\" && exit 0",
