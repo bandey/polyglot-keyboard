@@ -1,6 +1,6 @@
 {
   "name": "polyglot-keyboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multilingual virtual keyboard",
   "private": true,
   "author": "Dmitrii Kondratev <origbandey@gmail.com>",
