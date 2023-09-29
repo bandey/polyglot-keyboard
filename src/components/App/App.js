@@ -2,8 +2,8 @@ import React from 'react';
 
 import PolyglotKeyboard from '../PolyglotKeyboard/PolyglotKeyboard.js'; 
 
-import ListGroup from 'react-bootstrap/lib/ListGroup';
-import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
+import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroupItem from 'react-bootstrap/ListGroupItem';
 
 class App extends React.Component {
   constructor(props) {

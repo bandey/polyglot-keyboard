@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Modal from 'react-bootstrap/lib/Modal';
+import Modal from 'react-bootstrap/Modal';
 import Keyboard from 'react-virtual-keyboard'; 
 
 import keyboardLayout from './keyboardLayout.js';
@@ -41,10 +41,11 @@ class PolyglotKeyboard extends React.PureComponent {
               css: {
                 container: 'text-center',
                 input: 'form-control fontMedieval',
-                buttonDefault: 'btn btn-default fontMedieval',
-                buttonAction: 'btn-info',
-                // buttonHover: 'btn-secondary',
-                buttonActive: 'btn-primary',
+                buttonDefault: 'btn btn-light fontMedieval',
+                buttonAction: 'btn-outline-info',
+                // buttonHover: 'btn-dark',
+                buttonActive: 'btn-outline-primary',
+                // buttonEmpty: 'btn-outline-light',
                 buttonDisabled: 'disabled',
               },
               beforeInsert: keyboardLayout.beforeInsert,
