@@ -1,3 +1,7 @@
+:global .ui-keyboard-input {
+  margin-bottom: .2em;
+}
+
 :global .ui-keyboard-button {
   margin: .1em;
 }
